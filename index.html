@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+  <!-- 👍 YOUR HTML HERE 👍 -->
+  <div>
+      <img id="inn" onclick="rest(hero); displayStats(hero);" src = "https://rlv.zcache.com/pixelated_red_video_game_heart_postcard-re69f4d06664a4a5792e06652a763b0d8_vgbaq_8byvr_540.jpg/"/>
+      <img id="dagger" onclick="pickUpItem(hero, dagger); displayStats(hero);" src="dagger.png"/>
+      <img id="bag" onclick="equipWeapon(hero);displayStats(hero);" src = "bag.png" />
+  </div>
+
+  <div>
+    <img id="enemy" onclick="removeEnemy()" src="goomba.png" />
+    <img id="enemy" onclick="removeEnemy()" src="goomba.png" />
+    <img id="enemy" onclick="removeEnemy()" src="goomba.png" />
+    <img id="enemy" onclick="removeEnemy()" src="goomba.png" />
+    <img id="enemy" onclick="removeEnemy()" src="goomba.png" />
+    <img id="enemy" onclick="removeEnemy()" src="goomba.png" />
+    <img id="enemy" onclick="removeEnemy()" src="goomba.png" />
+  </div>
+
+  <div id="nameForm">
+    <form onsubmit="changeName(hero); return false">
+      <div class="nameBox">
+        <label for="name"></label>
+        <input type="text" id="name" placeholder="">
+      </div>
+      <div>
+        <button class="button" type="default">Change Name</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="stats">stats here</div>
+
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+
+  <div id="mocha">
+  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+  </div>
+
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="lib/game_logic.test.js"></script>
+
+</body>
+</html>
